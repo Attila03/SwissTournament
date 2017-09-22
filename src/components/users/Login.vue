@@ -65,7 +65,6 @@ export default {
   },
   computed: {
     redirected () {
-      console.log(this.$router)
       return this.$router.history.current.query.redirected
     }
   },
@@ -99,7 +98,7 @@ export default {
             'username': response.data.username,
             'token': response.data.auth_token.key
           })
-          this.$router.push('/')
+          this.$router.push('/register-tournament')
         }
       })
     }

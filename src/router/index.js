@@ -11,9 +11,14 @@ import AuthGuard from './auth-guard'
 Vue.use(VueRouter)
 
 export default new VueRouter({
+  base: '/',
   routes: [
     {
       path: '/',
+      redirect: '/login'
+    },
+    {
+      path: '/register-tournament',
       component: RegisterTournament,
       beforeEnter: AuthGuard.needUser
     },
@@ -26,6 +31,5 @@ export default new VueRouter({
     },
     {path: '/signup', component: Signup},
     {path: '/tournaments', component: Tournaments}
-  ],
-  mode: 'history'
+  ]
 })

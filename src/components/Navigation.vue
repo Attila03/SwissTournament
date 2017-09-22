@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="sideNav" temporary>
       <v-toolbar>
         <v-list>
-          <v-list-tile to="/">
+          <v-list-tile to="/register-tournament">
             <v-list-tile-action>
               <v-icon>home</v-icon>
             </v-list-tile-action>
@@ -30,7 +30,7 @@
     <v-toolbar dark class="brown darken-3">
       <v-toolbar-side-icon @click.stop="sideNav = !sideNav" class="hidden-sm-and-up"></v-toolbar-side-icon>
       
-        <v-toolbar-title><router-link to="/" tag="span" exact>Swiss Tourney</router-link></v-toolbar-title>
+        <v-toolbar-title><router-link to="/register-tournament" tag="span" exact>Swiss Tourney</router-link></v-toolbar-title>
       
       
       <v-spacer></v-spacer>
