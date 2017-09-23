@@ -19,7 +19,7 @@ export default {
         'matches': [],
         'concluded': false
       },
-      baseURL: 'https://swisstournament.herokuapp.com/'
+      baseURL: process.env.BASE_URL
     }
   },
   getInitialRoundState () {

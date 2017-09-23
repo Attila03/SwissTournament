@@ -156,13 +156,13 @@ export default {
     this.loading = true
     let tournamentId = this.$store.getters.currentTournament.id
     let roundNum = this.$route.params.round_num
-    let url = 'http://127.0.0.1:8000/api/tournaments/' + tournamentId + '/round/' + roundNum
+    let url = this.$store.getters.baseURL + 'api/tournaments/' + tournamentId + '/round/' + roundNum
+    let userToken = this.$store.getters.user.token
     axios({
       method: 'GET',
       url: url,
-      auth: {
-        username: 'attila',
-        password: 'aditya123'
+      headers: {
+        Authorization: 'Token ' + userToken
       }
     }).then(response => {
       if (response.data.exists) {

@@ -63,7 +63,7 @@ export default {
     onSignUp () {
       axios({
         method: 'POST',
-        url: 'http://127.0.0.1:8000/accounts/registration/',
+        url: this.$store.getters.baseURL + 'accounts/registration/',
         headers: {
           'Content-type': 'application/x-www-form-urlencoded'
         },

@@ -42,20 +42,12 @@
             <v-flex xs8 offset-xs2 class="text-xs-center">
               <h4>{{this.tournamentName}}</h4>
             </v-flex>
-            <!-- <v-flex xs8 offset-xs2 class="text-xs-center">
-              <h5>Players</h5>
-            </v-flex> -->
             <v-flex xs12 md8 offset-md2>
               <v-layout row wrap>
                 <v-flex xs6 class="text-xs-center" v-for="player in tempPlayerList" :key="player">
                   {{player}}
                 </v-flex>
               </v-layout>
-              <!-- <v-list>
-                <v-list-tile v-for="player in tempPlayerList" :key="player">
-                  <v-list-tile-content class="align-center">{{player}} </v-list-tile-content>
-                </v-list-tile>
-              </v-list> -->
             </v-flex> 
           </v-layout>
 

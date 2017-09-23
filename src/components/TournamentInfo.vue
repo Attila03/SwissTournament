@@ -76,12 +76,12 @@ export default {
   },
   mounted () {
     let tournamentId = this.$store.getters.currentTournament.id
+    let userToken = this.$store.getters.user.token
     axios({
       method: 'GET',
-      url: 'http://127.0.0.1:8000/api/tournaments/' + tournamentId + '/get-standings',
-      auth: {
-        username: 'attila',
-        password: 'aditya123'
+      url: this.$store.getters.baseURL + 'api/tournaments/' + tournamentId + '/get-standings',
+      headers: {
+        Authorization: 'Token ' + userToken
       }
     }).then(response => {
       this.playerStandings = response.data
@@ -94,10 +94,7 @@ export default {
 
 .container {
   padding: 20px;
-  /* background-image: url("https://ak6.picdn.net/shutterstock/videos/13429967/thumb/1.jpg"); */
-  /* background-image: url("http://farm5.staticflickr.com/4008/5148870343_18b37e19e2_o.jpg"); */
   background-color: rgba(225,165,125,0.7);
-  /* background-image: url("https://ak9.picdn.net/shutterstock/videos/24969068/thumb/5.jpg?i10c=img.resize(height:160)"); */
   background-size: 100% 100%;
   min-height: 100vh;
 }

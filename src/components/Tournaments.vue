@@ -56,10 +56,11 @@ export default {
     }
   },
   mounted () {
+    console.log(this.$store.getters.baseURL)
     let userToken = this.$store.getters.user.token
     axios({
       method: 'GET',
-      url: 'http://127.0.0.1:8000/api/tournaments/user/' + this.$store.getters.user.id,
+      url: this.$store.getters.baseURL + 'api/tournaments/user/' + this.$store.getters.user.id,
       headers: {
         Authorization: 'Token ' + userToken
       }

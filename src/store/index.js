@@ -27,7 +27,7 @@ export const store = new Vuex.Store({
         'matches': [],
         'concluded': false
       },
-      baseURL: 'https://swisstournament.herokuapp.com/'
+      baseURL: process.env.BASE_URL
     }
   },
   getters: {
@@ -87,7 +87,7 @@ export const store = new Vuex.Store({
       let userToken = context.getters.user.token
       axios({
         method: 'POST',
-        url: 'http://127.0.0.1:8000/api/tournaments/',
+        url: context.getters.baseURL + 'api/tournaments/',
         headers: {
           Authorization: 'Token ' + userToken
         },
@@ -108,7 +108,7 @@ export const store = new Vuex.Store({
 
       let getPairingsRequest = axios({
         method: 'GET',
-        url: 'http://127.0.0.1:8000/api/tournaments/' + tournamentId + '/' + 'get-pairings',
+        url: context.getters.baseURL + 'api/tournaments/' + tournamentId + '/' + 'get-pairings',
         headers: {
           Authorization: 'Token ' + userToken
         }
@@ -125,7 +125,7 @@ export const store = new Vuex.Store({
         }
         axios({
           method: 'POST',
-          url: 'http://127.0.0.1:8000/api/rounds/',
+          url: context.getters.baseURL + 'api/rounds/',
           headers: {
             Authorization: 'Token ' + userToken
           },
@@ -145,7 +145,7 @@ export const store = new Vuex.Store({
       let userToken = context.getters.user.token
       axios({
         method: 'PUT',
-        url: 'http://127.0.0.1:8000/api/rounds/' + roundId + '/',
+        url: context.getters.baseURL + 'api/rounds/' + roundId + '/',
         headers: {
           Authorization: 'Token ' + userToken
         },

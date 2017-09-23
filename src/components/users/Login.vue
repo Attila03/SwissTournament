@@ -66,7 +66,7 @@ export default {
       this.$store.commit('setLoading', true)
       axios({
         method: 'POST',
-        url: 'http://127.0.0.1:8000/accounts/login/',
+        url: this.$store.getters.baseURL + 'accounts/login/',
         headers: {
           'Content-type': 'application/x-www-form-urlencoded'
         },
