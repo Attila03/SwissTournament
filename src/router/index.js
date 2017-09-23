@@ -22,14 +22,27 @@ export default new VueRouter({
       component: RegisterTournament,
       beforeEnter: AuthGuard.needUser
     },
-    {path: '/tournament/rounds/:round_num', component: CurrentRound, props: true},
-    {path: '/tournament-info', component: TournamentInfo},
+    {
+      path: '/tournament/rounds/:round_num',
+      component: CurrentRound,
+      props: true
+    },
+    {
+      path: '/tournament-info',
+      component: TournamentInfo
+    },
     {
       path: '/login',
       component: Login,
       beforeEnter: AuthGuard.redirected
     },
-    {path: '/signup', component: Signup},
-    {path: '/tournaments', component: Tournaments}
+    {
+      path: '/signup',
+      component: Signup
+    },
+    {
+      path: '/tournaments',
+      component: Tournaments
+    }
   ]
 })

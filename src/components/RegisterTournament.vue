@@ -117,11 +117,10 @@ export default {
 <style scoped>
 
 #register-tournament {
-  background-image: url('https://images8.alphacoders.com/460/thumb-1920-460230.png');
+  background-image: url('https://swisstournament.herokuapp.com/static/images/Home.png');
   background-size: 100% 100%;
   padding-top: 25px;
   min-height: 100vh;
-  /* background-size: 100% cover; */
 }
 
 #register-tournament-card {

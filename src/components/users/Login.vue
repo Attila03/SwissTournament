@@ -1,10 +1,5 @@
 <template>
   <v-container fluid id="login">
-    <v-layout row>
-      <v-flex xs6 offset-xs3 class="text-xs-center" v-if="redirected">
-        I was redirected
-      </v-flex>
-    </v-layout>
 
     <v-layout row v-if="error" id="login-error">
       <v-flex xs10 offset-xs1 sm6 offset-sm3>
@@ -63,16 +58,7 @@ export default {
       showDummy: false
     }
   },
-  computed: {
-    redirected () {
-      return this.$router.history.current.query.redirected
-    }
-  },
   methods: {
-    // redirected () {
-    //   console.log(this.$router)
-    //   return this.$router.history.current.query.redirected
-    // },
     clearError () {
       this.error = ''
     },
@@ -110,7 +96,7 @@ export default {
 <style scoped>
   
  #login {
-  background-image: url("https://images8.alphacoders.com/460/thumb-1920-460230.png");
+  background-image: url("https://swisstournament.herokuapp.com/static/images/Home.png");
   background-size: 100% 100vh;
   padding-top: 25px;
   min-height: 100vh;

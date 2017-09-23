@@ -34,10 +34,11 @@ export default {
     return {
       tournaments: [],
       cardImagesURL: [
-        'http://aboutcagayandeoro.com/wp-content/uploads/2016/07/2016-Barangay-Carmen-Fiesta-Chess-Tournament.jpg',
-        'http://static.dnaindia.com/sites/default/files/styles/half/public/2016/06/04/467804-chesss.jpg?itok=CHbJ6I6f',
-        'http://media4.gradskissnis.rs/2016/04/chess-tournament.jpg',
-        'https://i2.wp.com/africachess.net/wp-content/uploads/2017/08/pexels-photo-333889.jpeg?resize=800%2C445&ssl=1'
+        this.$store.getters.baseURL + 'static/images/card_1.jpg',
+        this.$store.getters.baseURL + 'static/images/card_2.jpg',
+        this.$store.getters.baseURL + 'static/images/card_3.jpg',
+        this.$store.getters.baseURL + 'static/images/card_4.jpg',
+        this.$store.getters.baseURL + 'static/images/card_5.jpg'
       ]
     }
   },

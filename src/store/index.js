@@ -26,7 +26,8 @@ export const store = new Vuex.Store({
         'round_num': '',
         'matches': [],
         'concluded': false
-      }
+      },
+      baseURL: 'https://swisstournament.herokuapp.com/'
     }
   },
   getters: {
@@ -41,6 +42,9 @@ export const store = new Vuex.Store({
     },
     currentRound (state) {
       return state.stateObject.currentRound
+    },
+    baseURL (state) {
+      return state.stateObject.baseURL
     }
   },
 
