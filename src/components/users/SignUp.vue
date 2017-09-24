@@ -6,7 +6,7 @@
       </v-flex>
     </v-layout>
     <v-layout row>
-      <v-flex xs10 offset-xs-1 sm6 offset-sm3>
+      <v-flex xs10 offset-xs1 sm6 offset-sm3>
         <v-card id="signup-card">
           <v-card-text>
             <form @submit.prevent="onSignUp">
@@ -19,7 +19,7 @@
                 </v-flex>
                 <v-flex xs12>
                   <v-text-field name="password" label="Password" id="password" v-model="password" type="password"></v-text-field>
-                </v-flex>
+                </v-flex> 
                 <v-flex xs12>
                   <v-text-field 
                     name="confirmPassword" 
@@ -82,7 +82,7 @@ export default {
             'username': response.data.username,
             'token': response.data.auth_token.key
           })
-          this.$router.push('/')
+          this.$router.push('/register-tournament')
         }
       })
     }

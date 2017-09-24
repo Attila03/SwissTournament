@@ -27,7 +27,7 @@
                 <v-flex class="app-padding" xs9>
                   {{ match.white_player.name}}
                 </v-flex>
-                <v-flex xs3 class="text-xs-center app-padding">{{getPlayerScore(match, 'white')}}</v-flex>
+                <v-flex xs3 class="text-xs-center app-padding score">{{getPlayerScore(match, 'white')}}</v-flex>
               </v-layout>
               <v-layout row class="draw-container" @click="matchRegister(match, 'draw')">
                 <v-flex xs12 class="text-xs-center">DRAW</v-flex>
@@ -38,7 +38,7 @@
                 <v-flex xs9 class="app-padding">
                   {{match.black_player.name}}
                 </v-flex>
-                <v-flex xs3 class="text-xs-center app-padding">{{getPlayerScore(match, 'black')}}</v-flex>
+                <v-flex xs3 class="text-xs-center app-padding score">{{getPlayerScore(match, 'black')}}</v-flex>
               </v-layout>
             </v-card-text>
           </v-card>
@@ -68,7 +68,7 @@
                 <v-flex class="app-padding" xs9>
                   {{ match.white_player.name}}
                 </v-flex>
-                <v-flex xs3 class="text-xs-center app-padding">{{getPlayerScore(match, 'white')}}</v-flex>
+                <v-flex xs3 class="text-xs-center app-padding score">{{getPlayerScore(match, 'white')}}</v-flex>
               </v-layout>
               <v-layout row class="draw-container">
                 <v-flex xs12 class="text-xs-center">DRAW</v-flex>
@@ -78,7 +78,7 @@
                 <v-flex xs9 class="app-padding">
                   {{match.black_player.name}}
                 </v-flex>
-                <v-flex xs3 class="text-xs-center app-padding">{{getPlayerScore(match, 'black')}}</v-flex>
+                <v-flex xs3 class="text-xs-center app-padding score">{{getPlayerScore(match, 'black')}}</v-flex>
               </v-layout>
             </v-card-text>
           </v-card>
@@ -87,6 +87,11 @@
       <v-layout row>
         <v-flex xs8 offset-xs2 sm6 offset-sm3>
           <p class="text-xs-center green--text" id="success-msg">Results have been submitted successfully</p>
+        </v-flex>
+      </v-layout>
+      <v-layout row>
+        <v-flex xs12 class="text-xs-center">
+          <router-link to="/tournament-info" id="tournament-info">Go to Standings and Rounds</router-link>
         </v-flex>
       </v-layout>
     </v-container>
@@ -212,7 +217,7 @@ export default {
 }
 
 .loser {
-  background: rgb(130, 177, 235);
+  background: rgb(130, 157, 220);
 }
 
 .draw {
@@ -220,6 +225,11 @@ export default {
   background: rgb(188, 170, 164);
   /* background: rgb(215, 204, 200); */
  } 
+
+.score {
+  font-size: 18px;
+  font-weight: bolder;
+}
 
 #submit-result {
   margin: 30px;
@@ -230,6 +240,12 @@ export default {
 }
 
 #success-msg {
+  font-size: 24px;
+}
+
+#tournament-info {
+  text-decoration: none;
+  color: darkcyan;
   font-size: 24px;
 }
 

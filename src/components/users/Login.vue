@@ -37,8 +37,8 @@
       <v-flex xs12 class="text-xs-center">
         <v-btn @click="showDummy = !showDummy">Dummy User</v-btn>
         <div v-if="showDummy">
-          <p>Username: Attila</p>
-          <p>Password: password</p>
+          <p>Username: dummyuser</p>
+          <p>Password: dummyuser</p>
         </div>
       </v-flex>
     </v-layout>

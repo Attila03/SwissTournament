@@ -2,7 +2,12 @@
   <v-container fluid id="tournament-info">
     <v-layout row v-if="!tournamentName">
       <v-flex xs8 offset-xs2 class="text-xs-center">
-        <h4>You need to create a Tournament or load one of your existing tournaments.</h4>
+        <h5>
+          You need to 
+          <router-link to="/register-tournament">create</router-link> 
+          a Tournament or 
+          <router-link to="/tournaments">load</router-link>
+          one of your existing tournaments.</h5>
       </v-flex>
     </v-layout>
 
@@ -98,6 +103,16 @@ export default {
   background-size: 100% 100%;
   min-height: 100vh;
 }
+
+#tournament-info {
+  padding-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
 
 #tournament-name {
   margin-bottom: 0;
