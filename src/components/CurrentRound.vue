@@ -199,7 +199,7 @@ export default {
 
 
 .app-padding{
-  padding: 15px 15px 15px 25px;
+  padding: 15px 25px 15px 25px;
 }
 
 .undetermined {
