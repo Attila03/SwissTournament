@@ -18,7 +18,7 @@
 
     <v-container fluid v-if="!roundConcluded && !loading">
       <v-layout row wrap justify-space-evenly>
-        <v-flex xs8 offset-xs2 sm6 offset-sm0 md4 offset-md0 v-for="(match, i) in matches" :key="i">
+        <v-flex xs10 offset-xs1 sm6 offset-sm0 md4 offset-md0 v-for="(match, i) in matches" :key="i">
           <v-card>
             <v-card-text>
               <v-layout row class="player" 
@@ -60,7 +60,7 @@
 
     <v-container fluid v-if="roundConcluded && !loading">
       <v-layout row wrap justify-space-evenly>
-        <v-flex xs8 offset-xs2 sm6 offset-sm0 md4 offset-md0 v-for="(match, i) in matches" :key="i">
+        <v-flex xs10 offset-xs1 sm6 offset-sm0 md4 offset-md0 v-for="(match, i) in matches" :key="i">
           <v-card>
             <v-card-text>
               <v-layout row class="player" 
