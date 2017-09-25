@@ -16,7 +16,7 @@
           </v-card-title>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn flat @click="loadTournament(tournament.id)" class="orange--text">Load Tourney</v-btn>
+            <v-btn flat small @click="loadTournament(tournament.id)" class="orange--text">Load Tourney</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -82,11 +82,17 @@ export default {
 
 #tournaments {
   background-color: rgba(225,165,125,0.7);
+  min-height: 100vh;
 }
 
 .card__title {
   padding-bottom: 0;
   padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.card__title > h6 {
+  margin-bottom: 8px;
 }
 
 .card__actions {
